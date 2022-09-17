@@ -9,8 +9,7 @@
         "plugin:react/recommended",
         "airbnb",
         "airbnb/hooks",
-        "prettier",
-        "prettier/react"
+        "prettier"
     ],
     "overrides": [
     ],
@@ -23,7 +22,11 @@
         "react-native"
     ],
     "rules": {
-        // allow .js files to contain JSX code
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        // allow jsx syntax in js files
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        // suppress errors for missing 'import React' in files
+        "react/react-in-jsx-scope": "off",
+        // suppress errors for variable declaration at the bottom (while it is referenced on top e.g. styles)
+        "no-use-before-define": ["error", { "variables": false }]
     }
 }

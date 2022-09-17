@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# npm test
+
+# This will run lint-staged before a commit can be pushed to our codebase.
+npx lint-staged
+
