@@ -7,6 +7,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+		"test": "jest",
+		"test:ci": "jest --json --outputFile=jest-report.json",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -36,7 +39,8 @@
     "**/*.{js,jsx,ts,tsx}": [
       "prettier --write",
       "eslint --fix",
-      "jest --passWithNoTests"
+      "jest --passWithNoTests",
+      "git add"
     ]
   }
 }
